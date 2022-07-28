@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="calc.js"></script>
+  </head>
+    <body>
+      <div class="calculator">
+      <div class="calculator_display">0</div>
+      <div class="calculator_keys">
+        <button class="key--operator" data-action="add">*</button>
+        <button class="key--operator" data-action="add">/</button>
+        <button class="key--operator" data-action="add">-</button>
+        <button class="key--operator" data-action="add">+</button>
+        <button class="key--operator" data-action="add">=</button>
+      </div>
+      <h1 class="bg-sky-300 text-9x1">Kim's Calculator</h1>
+        <table>
+              <tr>
+                <td><input id="output1" type="text"/><td>
+                <td><input type="button" value="C" onclick="clearscreen('C')" class="bg-green-300"/></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="1" onclick="displays(1)" class="bg-green-300"/></td>
+                <td><input type="button" value="2" onclick="displays(2)" class="bg-green-300"/></td>
+                <td><input type="button" value="3" onclick="displays(3)" class="bg-green-300"/></td>
+                <td><input type="button" value="/" onclick="displays('/')" class="bg-green-300"/></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="4" onclick="displays(4)" class="bg-green-300"/></td>
+                <td><input type="button" value="5" onclick="displays(5)" class="bg-green-300"/></td>
+                <td><input type="button" value="6" onclick="displays(6)" class="bg-green-300"/></td>
+                <td><input type="button" value="*" onclick="displays('*')" class="bg-green-300"/></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="7" onclick="displays(7)" class="bg-green-300"/></td>
+                <td><input type="button" value="8" onclick="displays(8)" class="bg-green-300"/></td>
+                <td><input type="button" value="9" onclick="displays(9)" class="bg-green-300"/></td>
+                <td><input type="button" value="-" onclick="displays('-')" class="bg-green-300"/></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="0" onclick="displays(0)" class="bg-green-300"/></td>
+                <td><input type="button" value="." onclick="displays('.')" class="bg-green-300"/></td>
+                <!-- tally function call function tally to evaluate value -->
+                <td><input type="button" value="=" onclick="tally('=')" class="bg-green-300"/></td>
+                <td><input type="button" value="+" onclick="displays('+')" class="bg-green-300"/></td>
+              </tr>
+              <tr>
+        </table>

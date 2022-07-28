@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+    <head>
+        <script>
+            //function that display value 
+            function dis (val)
+            {
+                document.getElementById("result").value+=val
+            }
+            //funtion that evaluates the digit and return result 
+            function solve ()
+            {
+                let x = document.getElementById("result").value
+                let y = eval (x)
+                document.getElementById("result").value = y
+            }
+            //function that clear the display 
+            function clr ()
+            {
+                document.getElementById("result").value = " "
+            }
+        </script>
+        <!-- for styling -->
+        <style>
+            .title{
+                margin-bottom: 10px;
+                text-align: center;
+                width: 210px;
+                color:green;
+                border: solid black 2px;
+            }
+            input[type="button"]
+            {
+                background-color:green;
+                color:black;
+                border: solid black 2px;
+                width: 100%;
+                font-size: 30px;
+            }
+            .btns {
+                position: relative;
+                width: 50%;
+                padding: 10px 0px;
+            }
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="calc.js"></script>
+    </head>
+    <!-- create table -->
+    <body>
+<div class="title">My First Calculator</div>
+<div class="container"></div>
+<div class="calculator">
+    <div class="calculator_display">0</div>
+<div class="calculator_keys">
+    <button class="key--operator" data-action="add">*</button>
+    <button class="key--operator" data-action="add">*</button>
+</div>
+<result h-27 w-40></result>
+<table b="2"></table>
+  <tr>
+<td colspan="3"><input type="text" id="result" disabled /></td>
+<!-- clearScreen() function will call clr to clear all value -->
+<td> <input type="button" value="C" onclick="clr()" id="btn"/> </td>
+</tr>
+<tr>
+    <!-- create button and assign value to each button -->
+    <!-- display("1") will call function dis to display the value of clicked button -->
+    <td> <input type="button" value="1" onclick="dis('1')" /> </td>
+    <td> <input type="button" value="2" onclick="dis('2')" /> </td>
+    <td> <input type="button" value="3" onclick="dis('3')" /> </td>
+    <td> <input type="button" value="/" onclick="dis('/')" /> </td>
+</tr>
+<tr>
+    <td> <input type="button" value="4" onclick="dis('4')" /> </td>
+    <td> <input type="button" value="5" onclick="dis('5')" /> </td>
+    <td> <input type="button" value="6" onclick="dis('6')" /> </td>
+    <td> <input type="button" value="-" onclick="dis('-')" /> </td>
+</tr>
+<tr>
+    <td> <input type="button" value="7" onclick="dis('7')" /> </td>
+    <td> <input type="button" value="8" onclick="dis('8')" /> </td>
+    <td> <input type="button" value="9" onclick="dis('9')" /> </td>
+    <td> <input type="button" value="+" onclick="dis('+')" /> </td>
+</tr>
+<tr>
+    <td> <input type="button" value="." onclick="dis('.')" /> </td>
+    <td> <input type="button" value="0" onclick="dis('0')" /> </td>
+    <!-- solve function call function solve to evaluate value -->
+    <td> <input type="button" value="=" onclick="solve()" id="btn" /> </td>
+    <td> <input type="button" value="*" onclick="dis('*')" /> </td>
+</tr>
+</table>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
